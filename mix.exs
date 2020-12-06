@@ -8,7 +8,14 @@ defmodule Qew.MixProject do
       elixir: "~> 1.10",
       start_permanent: Mix.env() == :prod,
       description: "Elixir wrapper around erlang :queue module. Module keeps track of the queue length.",
-      package: package()
+      package: package(),
+      deps: deps()
+    ]
+  end
+
+  defp deps do
+    [
+      {:ex_doc, "~> 0.20", only: :dev}
     ]
   end
 
